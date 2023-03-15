@@ -1,4 +1,9 @@
+import 'package:betting_app/screens/Home_screen.dart';
+import 'package:betting_app/screens/Login_screen.dart';
+import 'package:betting_app/screens/registration_screen.dart';
+import 'package:betting_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -24,7 +29,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      home:SplashScreen(),
     );
   }
 }
