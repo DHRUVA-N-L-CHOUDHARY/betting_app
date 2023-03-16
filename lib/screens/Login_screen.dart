@@ -165,33 +165,7 @@ class LoginScreen extends StatelessWidget {
                   height: 50,
                 ),
 
-                // InkWell(
-                //   onTap: () {
-                //     // Get.to(() => NavigationScreen(
-                //     //       tabIndex: 3,
-                //     //     ));
-                //     Get.to(() => const RegisterPage(
-                //       index: 2,
-                //     ));
-                //   },
-                //   child: Row(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: [
-                //       Text(
-                //         'Not a Member?',
-                //         style: TextStyle(color: Colors.grey[700]),
-                //       ),
-                //       const SizedBox(
-                //         width: 4,
-                //       ),
-                //       const Text(
-                //         'Register now',
-                //         style: TextStyle(
-                //             color: Colors.blue, fontWeight: FontWeight.bold),
-                //       ),
-                //     ],
-                //   ),
-                // )
+                
               ],
             ),
           ),

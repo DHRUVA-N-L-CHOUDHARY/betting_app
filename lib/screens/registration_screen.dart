@@ -124,35 +124,6 @@ class _RegisterPageState extends State<RegisterPage>
           ),
         ],
       ),
-      // bottomSheet: SafeArea(
-      //   child: InkWell(
-      //     onTap: (){
-      //       Get.to(() => const RegisterPage(
-      //                 index: 2,
-      //               ));
-      //     },
-      //     child: Container(
-      //       color: Colors.grey[300],
-      //       child: Row(
-      //         mainAxisAlignment: MainAxisAlignment.center,
-      //         children: [
-      //           Text(
-      //             'Already have an account?',
-      //             style: TextStyle(color: Colors.grey[700]),
-      //           ),
-      //           const SizedBox(
-      //             width: 4,
-      //           ),
-      //           const Text(
-      //             'Sign In',
-      //             style:
-      //                 TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-      //   ),
-      // ),
     );
   }
 }
