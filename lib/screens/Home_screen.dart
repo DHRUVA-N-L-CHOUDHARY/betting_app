@@ -1,5 +1,9 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:betting_app/screens/My_bets.dart';
 import 'package:betting_app/screens/Profile_screen.dart';
+import 'package:betting_app/screens/Tournaments_screen.dart';
+import 'package:betting_app/utils/Colors.dart';
 import 'package:flutter/material.dart';
 
 class NavigationScreen extends StatefulWidget {
@@ -24,7 +28,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         child: IndexedStack(
           index: widget.tabIndex,
           children: const [
-            ProfilePage(),
+            TournamentsScreen(),
             ProfilePage(),
             MyBetsScreen(),
             ProfilePage(),
@@ -35,11 +39,11 @@ class _NavigationScreenState extends State<NavigationScreen> {
         height: 57,
         child: BottomNavigationBar(
           unselectedItemColor: Colors.black,
-          selectedItemColor: Colors.redAccent,
+          selectedItemColor: KPrimaryColor,
           onTap: changeTabIndex,
           iconSize: 15.0,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
           type: BottomNavigationBarType.shifting,
           currentIndex: widget.tabIndex,
           items: [
@@ -49,7 +53,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
             ),
             _bottomNavigationBarItem(
               icon: 'assets/games.png',
-              label: "Settings",
+              label: "Games",
             ),
             _bottomNavigationBarItem(
               icon: 'assets/mybets.png',
@@ -73,7 +77,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         height: 26,
         color: Colors.black54,
       ),
-      activeIcon: Image.asset(icon, scale: 1.3, height: 27, color: Colors.blue),
+      activeIcon: Image.asset(icon, scale: 1.3, height: 27, color: KPrimaryColor),
       label: label,
     );
   }

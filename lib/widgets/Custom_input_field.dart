@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class CustomInputField extends StatelessWidget {
   final TextEditingController controller;
@@ -13,7 +12,6 @@ class CustomInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
-    final double screenWidth = MediaQuery.of(context).size.width;
     return Padding(
       padding: EdgeInsets.all(screenHeight / 40),
       child: TextFormField(

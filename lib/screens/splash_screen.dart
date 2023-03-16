@@ -1,7 +1,6 @@
 import 'package:betting_app/screens/registration_screen.dart';
+import 'package:betting_app/utils/Colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -16,7 +15,7 @@ class SplashScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Image.asset("assets/logo-nobackground.png",width: (screenWidth/20)*19,),
-          Text(
+          const Text(
             "Welcome To Our Betting App",
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.w600, fontSize: 25,),
@@ -30,10 +29,10 @@ class SplashScreen extends StatelessWidget {
               ),
               child: TextButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 6, 53, 245),
+                  backgroundColor: KPrimaryColor,
                 ),
                 onPressed: () async {
-                  Get.to(()=> RegisterPage(index: 1,));
+                  Get.to(()=> const RegisterPage(index: 1,));
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: screenHeight / 80),
@@ -57,11 +56,11 @@ class SplashScreen extends StatelessWidget {
               ),
               child: TextButton(
                 style: TextButton.styleFrom(
-                  side: BorderSide(width: 1.5),
+                  side: const BorderSide(width: 1.5),
                   backgroundColor: Colors.white,
                 ),
                 onPressed: () async {
-                  Get.to(()=> RegisterPage(index: 2,));
+                  Get.to(()=> const RegisterPage(index: 2,));
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: screenHeight / 80),

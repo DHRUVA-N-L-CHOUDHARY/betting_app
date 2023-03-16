@@ -1,8 +1,7 @@
 import 'package:betting_app/config/lists/categories_list.dart';
 import 'package:betting_app/utils/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -43,23 +42,30 @@ class _ProfilePageState extends State<ProfilePage>
                   height: 90,
                   width: 90,
                   decoration: const BoxDecoration(
-                    image: DecorationImage(image: AssetImage("assets/person_profile.png")),
+                    image: DecorationImage(
+                        image: AssetImage("assets/person_profile.png")),
                     shape: BoxShape.circle,
                     color: Colors.blue,
                   ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text("Dhruva N L Choudhary",
-                   style: TextStyle(
+                  children: const[
+                    Text(
+                      "Dhruva N L Choudhary",
+                      style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.w600),
-                  ), Text("ID:500045",
-                   style: TextStyle(
+                    ),
+                    Text(
+                      "ID:500045",
+                      style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
-                          fontWeight: FontWeight.w600),)],
+                          fontWeight: FontWeight.w600),
+                    )
+                  ],
                 ),
               ],
             ),
@@ -81,7 +87,7 @@ class _ProfilePageState extends State<ProfilePage>
                       width: 30,
                       height: 30,
                     ),
-                    Text(
+                    const Text(
                       "Deposit",
                       style: TextStyle(
                           color: Colors.black,
@@ -105,7 +111,7 @@ class _ProfilePageState extends State<ProfilePage>
                       width: 30,
                       height: 30,
                     ),
-                    Text(
+                   const Text(
                       "Withdraw",
                       style: TextStyle(
                           color: Colors.black,
@@ -123,9 +129,9 @@ class _ProfilePageState extends State<ProfilePage>
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
-                  children: [
+                  children: const [
                     Text(
-                      "\$0",
+                      "\$355.5",
                       style: TextStyle(
                           color: Colors.red,
                           fontSize: 24,
@@ -141,9 +147,9 @@ class _ProfilePageState extends State<ProfilePage>
                   ],
                 ),
                 Column(
-                  children: [
+                  children: const[
                     Text(
-                      "\$0",
+                      "\$800.0",
                       style: TextStyle(
                           color: Colors.red,
                           fontSize: 24,
@@ -159,9 +165,9 @@ class _ProfilePageState extends State<ProfilePage>
                   ],
                 ),
                 Column(
-                  children: [
+                  children: const[
                     Text(
-                      "\$0",
+                      "\$5",
                       style: TextStyle(
                           color: Colors.red,
                           fontSize: 24,

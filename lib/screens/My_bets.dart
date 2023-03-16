@@ -1,9 +1,9 @@
 import 'package:betting_app/config/lists/categories_list.dart';
+import 'package:betting_app/utils/Colors.dart';
 import 'package:betting_app/utils/size_config.dart';
 import 'package:betting_app/widgets/Custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class MyBetsScreen extends StatefulWidget {
   const MyBetsScreen({super.key});
@@ -32,14 +32,32 @@ class _MyBetsScreenState extends State<MyBetsScreen>
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
+          automaticallyImplyLeading: false,
+          title: const Text("My Bets", style: TextStyle(color: Colors.black),),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right:20.0,top: 10.0, bottom: 10.0),
+              child: Container(
+                height: 0,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: KPrimaryColor,
+                  borderRadius: BorderRadius.circular(5)
+                ),
+                child: const Icon(Icons.arrow_back_ios_new,
+                size: 20,
+                )),
+            )
+          ],
           bottom: TabBar(
             labelColor: Colors.black,
+            indicatorColor: KPrimaryColor,
             controller: _tabController,
-            tabs: [
-              Tab(
+            tabs: const[
+               Tab(
                 text: 'Bets Slip',
               ),
-              Tab(text: 'Bet History'),
+               Tab(text: 'Bet History'),
             ],
           ),
           toolbarHeight: 50,
@@ -50,9 +68,9 @@ class _MyBetsScreenState extends State<MyBetsScreen>
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Image.asset("assets/mybets_background.png", width: 320,),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
+                Image.asset("assets/mybets_background.png", width: 320, ),
+                const Padding(
+                  padding: EdgeInsets.all(20.0),
                   child: Text(
                     "You Currently dont have any booked games",
                     textAlign: TextAlign.center,
@@ -67,8 +85,8 @@ class _MyBetsScreenState extends State<MyBetsScreen>
                   inptheight: 50,
                   inptwidth:
                       SizeConfig(context).getProportionateScreenWidth(130),
-                  color: Color.fromARGB(255, 6, 53, 245),
-                  style: TextStyle(
+                  color: KPrimaryColor,
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
